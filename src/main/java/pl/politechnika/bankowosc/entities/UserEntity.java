@@ -15,7 +15,7 @@ public class UserEntity {
     private Integer apartmentNumber;
 
     @Id
-    @Column(name = " idUser")
+    @Column(name = "iduser")
     public int getIdUser() {
         return idUser;
     }
@@ -25,7 +25,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "FirstName")
+    @Column(name = "firstname")
     public String getFirstName() {
         return firstName;
     }
@@ -35,7 +35,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "LastName")
+    @Column(name = "lastname")
     public String getLastName() {
         return lastName;
     }
@@ -45,7 +45,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "City")
+    @Column(name = "city")
     public String getCity() {
         return city;
     }
@@ -55,7 +55,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "Street")
+    @Column(name = "street")
     public String getStreet() {
         return street;
     }
@@ -65,7 +65,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "NumberStreet")
+    @Column(name = "numberstreet")
     public Integer getNumberStreet() {
         return numberStreet;
     }
@@ -75,7 +75,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "ApartmentNumber")
+    @Column(name = "apartmentnumber")
     public Integer getApartmentNumber() {
         return apartmentNumber;
     }

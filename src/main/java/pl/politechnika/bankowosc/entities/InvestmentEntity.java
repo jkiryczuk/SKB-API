@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
-@Table(name = "investment", schema = "invest", catalog = "")
+@Table(name = "investment")
 @IdClass(InvestmentEntityPK.class)
 public class InvestmentEntity {
     private int idInvestmentNumber;
@@ -18,7 +18,7 @@ public class InvestmentEntity {
     private Integer capitalizationDoneRate;
 
     @Id
-    @Column(name = "idInvestmentNumber")
+    @Column(name = "idinvestmentnumber")
     public int getIdInvestmentNumber() {
         return idInvestmentNumber;
     }
@@ -28,7 +28,7 @@ public class InvestmentEntity {
     }
 
     @Basic
-    @Column(name = "OpenDate")
+    @Column(name = "opendate")
     public Timestamp getOpenDate() {
         return openDate;
     }
@@ -38,7 +38,7 @@ public class InvestmentEntity {
     }
 
     @Basic
-    @Column(name = "EndDate")
+    @Column(name = "enddate")
     public Timestamp getEndDate() {
         return endDate;
     }
@@ -48,7 +48,7 @@ public class InvestmentEntity {
     }
 
     @Basic
-    @Column(name = "CurrentAmount")
+    @Column(name = "currentamount")
     public double getCurrentAmount() {
         return currentAmount;
     }
@@ -58,7 +58,7 @@ public class InvestmentEntity {
     }
 
     @Id
-    @Column(name = "idAccountNumber")
+    @Column(name = "idaccountnumber")
     public String getIdAccountNumber() {
         return idAccountNumber;
     }
@@ -68,7 +68,7 @@ public class InvestmentEntity {
     }
 
     @Id
-    @Column(name = "idInvestmentType")
+    @Column(name = "idinvestmenttype")
     public int getIdInvestmentType() {
         return idInvestmentType;
     }
@@ -78,7 +78,7 @@ public class InvestmentEntity {
     }
 
     @Id
-    @Column(name = "Capitalization_idCapitalization")
+    @Column(name = "capitalization_idcapitalization")
     public int getCapitalizationIdCapitalization() {
         return capitalizationIdCapitalization;
     }
@@ -88,7 +88,7 @@ public class InvestmentEntity {
     }
 
     @Basic
-    @Column(name = "CapitalizationDoneRate")
+    @Column(name = "capitalizationdonerate")
     public Integer getCapitalizationDoneRate() {
         return capitalizationDoneRate;
     }

@@ -9,7 +9,7 @@ public class InvestmenttypeEntityPK implements Serializable {
     private int idInvestmentType;
     private int idCurrency;
 
-    @Column(name = "idInvestmentType")
+    @Column(name = "idinvestmenttype")
     @Id
     public int getIdInvestmentType() {
         return idInvestmentType;
@@ -19,7 +19,7 @@ public class InvestmenttypeEntityPK implements Serializable {
         this.idInvestmentType = idInvestmentType;
     }
 
-    @Column(name = "idCurrency")
+    @Column(name = "idcurrency")
     @Id
     public int getIdCurrency() {
         return idCurrency;

@@ -20,7 +20,7 @@ public class InvestmenttypeEntity {
     private Integer idInterestIncrease;
 
     @Id
-    @Column(name = "idInvestmentType")
+    @Column(name = "idinvestmenttype")
     public int getIdInvestmentType() {
         return idInvestmentType;
     }
@@ -30,7 +30,7 @@ public class InvestmenttypeEntity {
     }
 
     @Basic
-    @Column(name = "Name")
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -40,7 +40,7 @@ public class InvestmenttypeEntity {
     }
 
     @Basic
-    @Column(name = "MinDepositAmount")
+    @Column(name = "mindepositamount")
     public double getMinDepositAmount() {
         return minDepositAmount;
     }
@@ -50,7 +50,7 @@ public class InvestmenttypeEntity {
     }
 
     @Basic
-    @Column(name = "RelaseDate")
+    @Column(name = "relasedate")
     public Date getRelaseDate() {
         return relaseDate;
     }
@@ -60,7 +60,7 @@ public class InvestmenttypeEntity {
     }
 
     @Basic
-    @Column(name = "RemovalDate")
+    @Column(name = "removaldate")
     public Date getRemovalDate() {
         return removalDate;
     }
@@ -70,7 +70,7 @@ public class InvestmenttypeEntity {
     }
 
     @Basic
-    @Column(name = "Availability")
+    @Column(name = "availability")
     public boolean isAvailability() {
         return availability;
     }
@@ -80,7 +80,7 @@ public class InvestmenttypeEntity {
     }
 
     @Basic
-    @Column(name = "ActualInterest")
+    @Column(name = "actualinterest")
     public double getActualInterest() {
         return actualInterest;
     }
@@ -90,7 +90,7 @@ public class InvestmenttypeEntity {
     }
 
     @Basic
-    @Column(name = "InterestType")
+    @Column(name = "interesttype")
     public String getInterestType() {
         return interestType;
     }
@@ -100,7 +100,7 @@ public class InvestmenttypeEntity {
     }
 
     @Id
-    @Column(name = "idCurrency")
+    @Column(name = "idcurrency")
     public int getIdCurrency() {
         return idCurrency;
     }
@@ -110,7 +110,7 @@ public class InvestmenttypeEntity {
     }
 
     @Basic
-    @Column(name = "idInterestIncrease")
+    @Column(name = "idinterestincrease")
     public Integer getIdInterestIncrease() {
         return idInterestIncrease;
     }

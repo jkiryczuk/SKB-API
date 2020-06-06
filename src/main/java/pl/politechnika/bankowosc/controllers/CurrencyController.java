@@ -11,7 +11,7 @@ import pl.politechnika.bankowosc.repositories.CurrencyRepository;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "/currency")
+@RequestMapping(path = "/api/currency")
 public class CurrencyController {
 
     @Autowired

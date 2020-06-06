@@ -11,7 +11,7 @@ public class InvestmentEntityPK implements Serializable {
     private int idInvestmentType;
     private int capitalizationIdCapitalization;
 
-    @Column(name = "idInvestmentNumber")
+    @Column(name = "idinvestmentnumber")
     @Id
     public int getIdInvestmentNumber() {
         return idInvestmentNumber;
@@ -21,7 +21,7 @@ public class InvestmentEntityPK implements Serializable {
         this.idInvestmentNumber = idInvestmentNumber;
     }
 
-    @Column(name = "idAccountNumber")
+    @Column(name = "idaccountnumber")
     @Id
     public String getIdAccountNumber() {
         return idAccountNumber;
@@ -31,7 +31,7 @@ public class InvestmentEntityPK implements Serializable {
         this.idAccountNumber = idAccountNumber;
     }
 
-    @Column(name = "idInvestmentType")
+    @Column(name = "idinvestmenttype")
     @Id
     public int getIdInvestmentType() {
         return idInvestmentType;
@@ -41,7 +41,7 @@ public class InvestmentEntityPK implements Serializable {
         this.idInvestmentType = idInvestmentType;
     }
 
-    @Column(name = "Capitalization_idCapitalization")
+    @Column(name = "capitalization_idcapitalization")
     @Id
     public int getCapitalizationIdCapitalization() {
         return capitalizationIdCapitalization;
