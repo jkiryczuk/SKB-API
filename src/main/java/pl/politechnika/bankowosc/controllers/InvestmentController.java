@@ -1,10 +1,8 @@
 package pl.politechnika.bankowosc.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import pl.politechnika.bankowosc.dao.DepositDao;
 import pl.politechnika.bankowosc.dao.InvestmentAllInfoDao;
 import pl.politechnika.bankowosc.entities.InvestmentEntity;
 import pl.politechnika.bankowosc.entities.MultiEntity;
@@ -26,6 +24,21 @@ public class InvestmentController {
         Double amount = repository.getAmountInfo(accountNumber);
         String identification = repository.getUserAbout(accountNumber);
         return new InvestmentAllInfoDao(listOfIntvest, amount, accountNumber, identification);
+    }
+
+    @PostMapping(path = "/deposit")
+    public void deposit(@RequestBody DepositDao dao){
+        repository.depositMoney(dao.getAmount(),dao.getIdinvestment());
+    }
+
+    @GetMapping(path = "/types")
+    public List<String> getTypes() {
+        return repository.getTypes();
+    }
+
+    @GetMapping(path = "/capitalizations")
+    public List<String> getCapitalizations() {
+        return repository.getCapitalizations();
     }
 
     @GetMapping(path = "/earlyend")

@@ -9,7 +9,6 @@ import java.util.List;
 
 public interface InvestmentRepository extends JpaRepository<InvestmentEntity, Integer> {
 
-
     List<InvestmentEntity> findAllByIdAccountNumber(String accountNumber);
 
     @Query(value = "select Name from investmenttype where idInvestmentType= ?1", nativeQuery = true)
@@ -27,6 +26,14 @@ public interface InvestmentRepository extends JpaRepository<InvestmentEntity, In
             "where a.AccountNumber =?1", nativeQuery = true)
     String getUserAbout(String accountnumber);
 
+    @Query(value = "select name from investmenttype order by idInvestmentType",nativeQuery = true)
+    List<String> getTypes();
+
+    @Query(value = "select type from capitalization order by idCapitalization",nativeQuery = true)
+    List<String> getCapitalizations();
+
+    @Procedure
+    void depositMoney(double _amount, int _idinvestment);
 
     @Procedure
     void UpdateAmount(int id_pay_history);
