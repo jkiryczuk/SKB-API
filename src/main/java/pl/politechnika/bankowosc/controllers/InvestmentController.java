@@ -2,6 +2,7 @@ package pl.politechnika.bankowosc.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pl.politechnika.bankowosc.dao.CreateDao;
 import pl.politechnika.bankowosc.dao.DepositDao;
 import pl.politechnika.bankowosc.dao.InvestmentAllInfoDao;
 import pl.politechnika.bankowosc.entities.InvestmentEntity;
@@ -27,8 +28,18 @@ public class InvestmentController {
     }
 
     @PostMapping(path = "/deposit")
-    public void deposit(@RequestBody DepositDao dao){
-        repository.depositMoney(dao.getAmount(),dao.getIdinvestment());
+    public void deposit(@RequestBody DepositDao dao) {
+        repository.depositMoney(dao.getAmount(), dao.getIdinvestment());
+    }
+
+    @PostMapping(path = "/addnew")
+    public void addnew(@RequestBody CreateDao dao) {
+        System.out.println(dao.toString());
+        repository.create_new_investment(dao.getAccountnumber(),
+                dao.getIdcapitalization(),
+                dao.getIdinvestmenttype(),
+                dao.getAmount(),
+                dao.getDday());
     }
 
     @GetMapping(path = "/types")

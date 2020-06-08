@@ -26,20 +26,23 @@ public interface InvestmentRepository extends JpaRepository<InvestmentEntity, In
             "where a.AccountNumber =?1", nativeQuery = true)
     String getUserAbout(String accountnumber);
 
-    @Query(value = "select name from investmenttype order by idInvestmentType",nativeQuery = true)
+    @Query(value = "select name from investmenttype order by idInvestmentType", nativeQuery = true)
     List<String> getTypes();
 
-    @Query(value = "select type from capitalization order by idCapitalization",nativeQuery = true)
+    @Query(value = "select type from capitalization order by idCapitalization", nativeQuery = true)
     List<String> getCapitalizations();
+
+    @Procedure
+    void create_new_investment(String accountnumber, int idCapitalization, int idInvestmentType, double amount, int dday);
 
     @Procedure
     void depositMoney(double _amount, int _idinvestment);
 
     @Procedure
-    void UpdateAmount(int id_pay_history);
+    void EarlyEnd(int id_inv);
 
     @Procedure
-    void EarlyEnd(int id_inv);
+    void UpdateAmount(int id_pay_history);
 
     @Procedure
     void MoneyBack(int id_investment);
